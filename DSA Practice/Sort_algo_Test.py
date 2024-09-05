@@ -2,7 +2,7 @@
 
 import random
 import numpy as np
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import time
 
 #asks how many arrays to make
@@ -130,7 +130,22 @@ def __main__():
 
         array_lengths.append(array_length)
 
-
-
         print("\n")
+
+    #Graph
+        plt.figure(figsize=(12, 8))
+    if B_sort_yes.upper() == "Y":
+        plt.plot(array_lengths, bubble_sort_times, label="Bubble Sort", marker='o')
+    plt.plot(array_lengths, merge_sort_times, label="Merge Sort", marker='o')
+    plt.plot(array_lengths, quick_GPT_sort_times, label="Quick Sort GPT", marker='o')
+    plt.plot(array_lengths, quick_GPT_sort_times, label="Quick Sort STACK OVERFLOW", marker='o')
+    plt.plot(array_lengths, quick_sort_Stack1_times, label="Insertion Sort", marker='o')
+    #plt.plot(array_lengths, heap_sort_times, label="Heap Sort", marker='o')
+    plt.xlabel('Array Size (n^5)')
+    plt.ylabel('Time (seconds)')
+    plt.title('Sorting Algorithms Performance Comparison')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
 __main__()
