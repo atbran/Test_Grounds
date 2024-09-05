@@ -42,6 +42,17 @@ def merge_sort(array):
                 j += 1
             k += 1
 
+def quick_sort(array):
+    n = len(array)
+    if n <= 1:
+        return n
+    else:
+        pivot = n // 2
+        left = array[:pivot]
+        right = array[pivot:]
+
+
+
 def measure_sort_time(sort_function, arr):
     start_time = time.perf_counter()
     sort_function(arr.copy())  # Use arr.copy() to avoid sorting the same array twice
