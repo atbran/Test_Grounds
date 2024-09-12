@@ -133,7 +133,7 @@ def __main__():
         print("\n")
 
     #Graph
-        plt.figure(figsize=(12, 8))
+    plt.figure(figsize=(12, 8))
     if B_sort_yes.upper() == "Y":
         plt.plot(array_lengths, bubble_sort_times, label="Bubble Sort", marker='o')
     plt.plot(array_lengths, merge_sort_times, label="Merge Sort", marker='o')

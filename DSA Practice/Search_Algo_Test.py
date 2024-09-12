@@ -77,5 +77,10 @@ def __main__():
         print(f"Binary Search Result: {binary_result} | Time: {binary_time:.10f} seconds")
         print(f"Eclectic Search Result: {eclectic_result} | Time: {eclectic_time:.10f} seconds")
 
+    #graph results
+
+    plt.figure(figsize=(12, 8))
+    #plt.plot()
+
 #let er rip!!
 __main__()
