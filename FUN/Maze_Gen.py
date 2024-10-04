@@ -3,7 +3,7 @@ import random
 
 res = width, height = 1202, 902
 
-tile = 15
+tile = 25
 
 cols,rows = width // tile,height // tile
 
@@ -76,6 +76,10 @@ def remove_walls(current,next):
     elif dy ==-1:
         current.walls['top'] = False
         next.walls['bottom'] = False
+        next.walls['bottom'] = False
+    elif dy == -1:
+        current.walls['bottom'] = False
+        next.walls['top'] = False
 
 
 grid_cells = [Cell(col,row) for row in range(rows) for col in range(cols)]
